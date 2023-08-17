@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> guess the number </title>
+</head>
+<body>
+<script> 
+
+
+
+while( true ) {
+
+  let userdecision = confirm("you want to play game");
+
+  if ( userdecision == true ) {   
+
+      let uservalue = prompt("enter you guess number");
+
+      let randomvalue = Math.floor(Math.random() * 5);
+
+      if (+uservalue == randomvalue) {
+        alert("correct , you won this game !")
+      } else if (+uservalue > randomvalue ) {
+        alert("your guess is to high")
+      } else if (+uservalue <  0) {
+        alert("your guess is to low ")
+      } else {
+        alert("you loose this game")
+      }
+    } else if (userdecision == false) {
+      break;
+    }
+  }
+
+
+</script>
+</body>
+</html>
