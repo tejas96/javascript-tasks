@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing Game</title>
+</head>
+
+<body>
+    <script>
+        let choice = true;
+
+        while (choice) {
+
+            let guess = Math.floor(Math.random() * 11)+1;
+            let number = prompt("Enter your guess : ",);
+
+
+            if (number == "") {
+                alert("Please enter number :");
+                number = prompt("Enter your guess : ",);
+            }
+            if (number != null) {
+
+                if (number == guess) {
+                    alert(`Correct! \n your guess is ${number} & random guess is ${guess}`);
+                } else if (number < guess) {
+                    alert(`Your guess is too low. \n your guess is ${number} & random guess is ${guess}`);
+                }
+                else {
+                    alert(`Your guess is too high. \n your guess is ${number} & random guess is ${guess}`);
+                }
+                choice = confirm("would you want to play again?");
+            }
+            else {
+                option = confirm("Would you want to exit game :");
+                if (option) {
+                    alert("Thanks for your time ");
+                    choice = false;
+                }
+                else {
+                    continue;
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
