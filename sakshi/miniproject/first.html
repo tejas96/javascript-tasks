@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    
+
+    
+     h1{
+    font-family:arial black;
+    font-size:70px;
+    background-image: 
+    linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;  
+    
+
+        }
+        p{
+            font-size:30px;
+            text-align: center;
+            color: blue;
+            font-style: italic;
+            font: bold;
+        }
+
+        button{
+           
+            margin-left: 45%;
+            align-items: center;
+             text-decoration: solid ;
+            font-size: 50px;
+            color: rgb(45, 18, 197);
+            
+        }
+        img{
+            height: 300px;
+            margin-left: 30%;
+            width:550px ;
+            align-items: center;
+        }
+
+    </style>
+</head>
+<body>
+    
+     <h1>Number Guessing Game with Code-Craft</h1>
+     <p> Lets play Guys !</p>
+    <button onclick="guessGame()">PLAY</button>
+    <br>
+    <br>
+    <img src="images.jpg" alt="">
+
+
+     
+    
+
+    <script> 
+    function guessGame(){
+
+        
+    number = Math.floor(Math.random()*10);
+    let guess = prompt("Guess a number from 1 to 10 : ");
+        const exit = ("thanks for your interest ");
+           if (guess == null || guess == "") {
+           exit = alert("want to exit ");
+
+            
+           }
+        
+        
+    while (guess != number) {
+
+           
+           
+          if (number < guess) {
+            guess = prompt("You guessed too high! Keep guessing!");
+        
+
+        }
+        
+    
+        else if (number > guess) {
+            guess = prompt("You guessed too low! Keep guessing!");
+        
+        }
+    }
+    
+     
+     alert("Great !  Your Guess is Correct ");
+    alert("Your guess number is :"+guess)
+        
+    
+    
+    
+    const playagain = confirm(" play again ?");
+           if(playagain)
+           {
+             guessGame();
+           }
+           else
+           {
+            alert("thanks for playing");
+        
+           }
+
+
+           
+        }    
+          
+    //function guessGame(); 
+
+    </script>
+</body>
+</html>
